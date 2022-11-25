@@ -11,17 +11,24 @@ In questo repository vogliamo raccogliere le soluzioni in *Go* della community i
 
 ## Come funziona?
 
-Per partecipare è sufficiente aggiungere il vostro username Github nel [`teams.yaml`](./teams.yaml) e, nel caso vogliate partecipare con un team, aggiungervi **anche** nella sezione "team".  
+Per partecipare aggiungetevi nel [`teams.yaml`](./teams.yaml), ed eventualmente **anche** in un "team".  
 
-Ovviamente dovrete iscrivervi anche sul sito ufficiale, dove potrete trovare i quiz.
+Sul sito ufficiale invece potrete trovare i quiz.
 
-Una volta iscritti basterà aprire una PR con la vostra soluzione (sotto `2022/dayXX/username`, aggiungendo anche il vostro `input.txt` (che è personalizzato).
+Una volta iscritti lanciate `./scripts/new-puzzle.sh <YEAR> <DAY>` che creerà una cartella `2022/dayXX/username` con un po' di scaffolding.
+
+```
+-> % ./scripts/new-puzzle.sh 2022 1                                                                                                  
+You can now run 'cd ./2022/day01/enrichman' and work on your solution!
+```
+
+Una volta risolto il quiz aprite una PR con la vostra soluzione!
 
 ## Setup
 
-Per comodità il repo ha un piccolo script `./scripts/new-puzzle.sh` per poter generare uno scaffolding uguale per tutti.  
-Copiate il file `.env.sample` in `.env`, e modificatelo aggiungendo il vostro `USERNAME` ed il cookie `session` del sito dell'Advent of Code.
-In questo modo lo script riuscirà in automatico anche a scaricare il vostro input.
+Copiate il file `.env.sample` in `.env`, e modificatelo aggiungendo il vostro `USERNAME` ed il cookie `session` del sito dell'Advent of Code.  
+
+In questo modo lo script riuscirà a scaricare il vostro input personalizzato da poter usare per testare la soluzione.
 
 ```
 -> % cp .env.sample .env
@@ -29,12 +36,6 @@ In questo modo lo script riuscirà in automatico anche a scaricare il vostro inp
 ```
 USERNAME=enrichman
 session=my-super-secret-session
-```
-
-Lo script accetta l'anno ed il giorno di riferimento, creando una cartella con il vostro input ed alcuni file.
-```
--> % ./scripts/new-puzzle.sh 2022 1                                                                                                  
-You can now run 'cd ./2022/day01/enrichman' and work on your solution!
 ```
 
 ## Cosa si vince?
@@ -60,11 +61,3 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 _coming soon_
 
 Per partecipare alla "private leaderboard" contattatemi per ricevere il codice di accesso.
-
-## Donazioni
-
-Se l'idea ti è piaciuta puoi offrirmi un caffè! :coffee:
-Ogni danaro verrà utilizzato nell'acquisto/stampa del premio (o premi?).
-Tagga il messaggio con #AOC per identificare la donazione!
-
-https://www.buymeacoffee.com/enrichman
