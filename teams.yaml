@@ -1,0 +1,12 @@
+
+participants:
+- enrichman
+
+# 
+# Join a team by adding your name to it!
+#
+team:
+- id: golangroma
+  link: https://golangroma.it
+  members:
+  - enrichman
