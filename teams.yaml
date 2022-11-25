@@ -1,6 +1,7 @@
 
 participants:
 - enrichman
+- luigibarbato
 
 # 
 # Join a team by adding your name to it!
@@ -10,6 +11,7 @@ team:
   link: https://golangroma.it
   members:
   - enrichman
+
 - id: golangnapoli
   link: https://golangnapoli.it
   members:
