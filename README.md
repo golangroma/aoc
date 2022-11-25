@@ -49,12 +49,14 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | User  | | Team  | Submissions  | 
 |---|-------|-|-------|--------------|
 | 1 | ![https://github.com/enrichman.png?size=40](https://github.com/enrichman.png?size=40) | [enrichman](https://github.com/enrichman) | golangroma |   |
+| 2 | ![https://github.com/luigibarbato.png?size=40](https://github.com/luigibarbato.png?size=40) | [luigibarbato](https://github.com/luigibarbato) | golangnapoli |   |
 
 ### Team Leaderboard
 
 | # | Team  | Submissions  | 
 |---|-------|--------------|
 | 1 | golangroma | - |
+| 2 | golangnapoli | - |
 
 ### Private Leaderboard
 
