@@ -50,6 +50,8 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 |---|-------|-|-------|--------------|
 | 1 | ![https://github.com/enrichman.png?size=40](https://github.com/enrichman.png?size=40) | [enrichman](https://github.com/enrichman) | golangroma |   |
 | 2 | ![https://github.com/luigibarbato.png?size=40](https://github.com/luigibarbato.png?size=40) | [luigibarbato](https://github.com/luigibarbato) | golangnapoli |   |
+| 3 | ![https://github.com/giulianopz.png?size=40](https://github.com/giulianopz.png?size=40) | [giulianopz](https://github.com/giulianopz) | golangroma |   |
+| 4 | ![https://github.com/omissis.png?size=40](https://github.com/omissis.png?size=40) | [omissis](https://github.com/omissis) | golangtorino |   |
 
 ### Team Leaderboard
 
