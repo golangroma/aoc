@@ -3,7 +3,7 @@ participants:
 - enrichman
 - luigibarbato
 
-# 
+#
 # Join a team by adding your name to it!
 #
 team:
@@ -17,3 +17,12 @@ team:
   link: https://golangnapoli.it
   members:
   - luigibarbato
+
+- id: golangtorino
+  link: https://www.meetup.com/golang-torino/
+  members:
+  - omissis
+
+- id: golangmilano
+  link: https://www.meetup.com/golang-milano/
+  members: []
