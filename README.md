@@ -57,6 +57,8 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 |---|-------|--------------|
 | 1 | golangroma | - |
 | 2 | golangnapoli | - |
+| 3 | golangtorino | - |
+| 4 | golangmilano | - |
 
 ### Private Leaderboard
 
