@@ -83,7 +83,7 @@ func GetUsersFromTeams(teams Teams) []User {
 	for _, p := range teams.Participants {
 		participantsMap[p] = User{
 			Username:   p,
-			Avatar:     fmt.Sprintf("https://github.com/%s.png?size=40", p),
+			Avatar:     fmt.Sprintf("https://github.com/%s.png?size=60", p),
 			Team:       Team{},
 			ProfileURL: fmt.Sprintf("https://github.com/%s", p),
 		}
