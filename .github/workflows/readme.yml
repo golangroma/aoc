@@ -1,7 +1,4 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
-name: Go
+name: Update README.md
 
 on:
   workflow_dispatch:
@@ -38,5 +35,8 @@ jobs:
       run: |
         git config --global user.name 'Enrico Candino'
         git config --global user.email 'enrico.candino@gmail.com'
-        git commit -am "Automated commit"
-        git push
+        if [[ `git status --porcelain` ]]; then
+          git commit -am "Automated commit"
+          git push
+        fi
+        
