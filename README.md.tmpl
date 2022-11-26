@@ -49,7 +49,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | User  | | Team  | Submissions  | 
 |---|-------|-|-------|--------------|
 {{- range $i, $u := .Users}}
-| {{ add $i 1 }} | ![{{ $u.Avatar }}]({{ $u.Avatar }}) | [{{ $u.Username }}]({{ $u.ProfileURL }}) | {{ $u.Team.ID }} |   |
+| {{ add $i 1 }} | ![{{ $u.Avatar }}]({{ $u.Avatar }}) | [{{ $u.Username }}]({{ $u.ProfileURL }}) | {{ $u.Team.ID }} | {{ index $u.Submissions "2022" }} (2022) <br /> {{ index $u.Submissions "2021" }} (2021) <br /> {{ index $u.Submissions "2020" }} (2020) |
 {{- end}}
 
 ### Team Leaderboard

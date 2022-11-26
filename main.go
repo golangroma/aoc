@@ -2,12 +2,18 @@ package main
 
 import (
 	"fmt"
+	"io/fs"
 	"log"
 	"os"
+	"path/filepath"
+	"sort"
+	"strings"
 	"text/template"
 
 	"gopkg.in/yaml.v2"
 )
+
+var years = []string{"2022", "2021", "2020"}
 
 type Teams struct {
 	Teams        []Team   `yaml:"team"`
@@ -25,7 +31,7 @@ type User struct {
 	Avatar      string
 	Team        Team
 	ProfileURL  string
-	Submissions int
+	Submissions map[string]int
 }
 
 func main() {
@@ -37,6 +43,20 @@ func main() {
 	checkErr(err)
 
 	users := GetUsersFromTeams(teams)
+	userYearSubmissionsMap := findSubmissions()
+	for i := range users {
+		users[i].Submissions = userYearSubmissionsMap[users[i].Username]
+	}
+
+	// sort users by submissions
+	sort.Slice(users, func(i, j int) bool {
+		for _, year := range years {
+			if users[i].Submissions[year] != users[j].Submissions[year] {
+				return users[i].Submissions[year] > users[j].Submissions[year]
+			}
+		}
+		return users[i].Username < users[j].Username
+	})
 
 	readmeTemplate, err := template.New("README.md.tmpl").Funcs(template.FuncMap{"add": add}).ParseFiles("README.md.tmpl")
 	checkErr(err)
@@ -62,11 +82,10 @@ func GetUsersFromTeams(teams Teams) []User {
 
 	for _, p := range teams.Participants {
 		participantsMap[p] = User{
-			Username:    p,
-			Avatar:      fmt.Sprintf("https://github.com/%s.png?size=40", p),
-			Team:        Team{},
-			ProfileURL:  fmt.Sprintf("https://github.com/%s", p),
-			Submissions: 0,
+			Username:   p,
+			Avatar:     fmt.Sprintf("https://github.com/%s.png?size=40", p),
+			Team:       Team{},
+			ProfileURL: fmt.Sprintf("https://github.com/%s", p),
 		}
 	}
 
@@ -85,6 +104,29 @@ func GetUsersFromTeams(teams Teams) []User {
 	}
 
 	return users
+}
+
+func findSubmissions() map[string]map[string]int {
+	userYearSubmissionsMap := map[string]map[string]int{}
+
+	for _, year := range years {
+		err := filepath.WalkDir(year, func(path string, d fs.DirEntry, err error) error {
+			parts := strings.Split(path, string(os.PathSeparator))
+			if len(parts) == 3 && d.IsDir() {
+				user := d.Name()
+
+				if userYearSubmissionsMap[user] == nil {
+					userYearSubmissionsMap[user] = make(map[string]int)
+				}
+				userYearSubmissionsMap[user][year]++
+			}
+
+			return nil
+		})
+		checkErr(err)
+	}
+
+	return userYearSubmissionsMap
 }
 
 func checkErr(err error) {
