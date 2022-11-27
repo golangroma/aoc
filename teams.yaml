@@ -4,6 +4,7 @@ participants:
 - luigibarbato
 - giulianopz
 - omissis
+- mastrogiovanni
 
 #
 # Join a team by adding your name to it!
@@ -14,6 +15,7 @@ team:
   members:
   - enrichman
   - giulianopz
+  - mastrogiovanni
 
 - id: golangnapoli
   link: https://golangnapoli.it
