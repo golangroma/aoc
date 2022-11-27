@@ -51,7 +51,8 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | 1 | ![https://github.com/enrichman.png?size=60](https://github.com/enrichman.png?size=60) | [enrichman](https://github.com/enrichman) | golangroma | 0 (2022) <br /> 3 (2021) <br /> 0 (2020) |
 | 2 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | golangroma | 0 (2022) <br /> 0 (2021) <br /> 0 (2020) |
 | 3 | ![https://github.com/luigibarbato.png?size=60](https://github.com/luigibarbato.png?size=60) | [luigibarbato](https://github.com/luigibarbato) | golangnapoli | 0 (2022) <br /> 0 (2021) <br /> 0 (2020) |
-| 4 | ![https://github.com/omissis.png?size=60](https://github.com/omissis.png?size=60) | [omissis](https://github.com/omissis) | golangtorino | 0 (2022) <br /> 0 (2021) <br /> 0 (2020) |
+| 4 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | golangroma | 0 (2022) <br /> 0 (2021) <br /> 0 (2020) |
+| 5 | ![https://github.com/omissis.png?size=60](https://github.com/omissis.png?size=60) | [omissis](https://github.com/omissis) | golangtorino | 0 (2022) <br /> 0 (2021) <br /> 0 (2020) |
 
 ### Team Leaderboard
 
