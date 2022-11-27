@@ -44,6 +44,12 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 ## Leaderboards
 
+
+### Private Leaderboard
+
+Per partecipare alla "private leaderboard" utilizzate il codice di accesso `<cinque><zero>4742-765328a3` su https://adventofcode.com/2022/leaderboard/private
+
+
 ### User Leaderboard
 
 | # | User  | | Team  | Submissions  | 
@@ -62,9 +68,3 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | 2 | golangnapoli | - |
 | 3 | golangtorino | - |
 | 4 | golangmilano | - |
-
-### Private Leaderboard
-
-_coming soon_
-
-Per partecipare alla "private leaderboard" contattatemi per ricevere il codice di accesso.
