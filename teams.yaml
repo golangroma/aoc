@@ -5,6 +5,7 @@ participants:
 - giulianopz
 - omissis
 - mastrogiovanni
+- Al-Pragliola
 
 #
 # Join a team by adding your name to it!
@@ -21,6 +22,7 @@ team:
   link: https://golangnapoli.it
   members:
   - luigibarbato
+  - Al-Pragliola
 
 - id: golangtorino
   link: https://www.meetup.com/golang-torino/
