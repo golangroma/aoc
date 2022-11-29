@@ -73,8 +73,6 @@ func (c *Client) GetLeaderboard(year string) (*Leaderboard, error) {
 	}
 	defer res.Body.Close()
 
-	fmt.Println(res.StatusCode)
-
 	leaderBoard := &Leaderboard{}
 	err = json.NewDecoder(res.Body).Decode(leaderBoard)
 	if err != nil {
