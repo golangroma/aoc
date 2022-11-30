@@ -23,13 +23,13 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      run: go build -v ./...
+      run: make
 
     - name: Test
       run: make test
       
     - name: Run
-      run: go run main.go
+      run: ./aoc
 
     - name: Commit README
       run: |

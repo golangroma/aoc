@@ -1,13 +1,19 @@
 
 participants:
-- enrichman
-- luigibarbato
-- giulianopz
-- omissis
-- mastrogiovanni
-- Al-Pragliola
-- lucianoq
-- alessio-perugini
+
+- aoc_id: 504742
+  name: enrichman
+- name: luigibarbato
+- aoc_id: 2284430
+  name: giulianopz
+- name: omissis
+- aoc_id: 731816
+  name: mastrogiovanni
+- aoc_id: 1599019
+  name: Al-Pragliola
+- aoc_id: 373470
+  name: lucianoq
+- name: alessio-perugini
 
 #
 # Join a team by adding your name to it!
