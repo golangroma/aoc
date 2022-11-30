@@ -6,7 +6,7 @@ type User struct {
 	AocID       int
 	Name        string
 	Username    string
-	Avatar      string
+	AvatarURL   string
 	Team        *Team
 	ProfileURL  string
 	Submissions map[string]int
@@ -30,7 +30,7 @@ func GetUsersFromTeams(teams *Teams) []User {
 		participantsMap[p.Name] = User{
 			AocID:      p.ID,
 			Username:   p.Name,
-			Avatar:     fmt.Sprintf("https://github.com/%s.png?size=60", p.Name),
+			AvatarURL:  fmt.Sprintf("https://github.com/%s.png?size=60", p.Name),
 			ProfileURL: fmt.Sprintf("https://github.com/%s", p.Name),
 		}
 	}

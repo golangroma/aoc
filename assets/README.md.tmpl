@@ -27,7 +27,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | Score | User  | | Stars | Team  | Submissions  | 
 |---|-------|-------|-|-------|-------|--------------|
 {{- range $i, $u := .Users}}
-| {{ add $i 1 }} | {{ $u.Score }} | {{- if $u.Avatar }} ![{{ $u.Avatar }}]({{ $u.Avatar }}) {{- end }} | {{- if $u.Username }} [{{ $u.Username }}]({{ $u.ProfileURL }}) {{- else }} {{ $u.Name }} {{- end }} | {{ range $i, $v := $u.Stars }} {{- if eq $v 0}}➖{{- end}}{{- if eq $v 1}}⭐{{- end}}{{- if eq $v 2}}🌟{{- end}} {{- end }} | {{- if and $u.Team $u.Team.ID }}{{ $u.Team.ID }}{{- end }} | {{ index $u.Submissions "2022" }} (2022) <br /> {{ index $u.Submissions "2021" }} (2021) <br /> {{ index $u.Submissions "2020" }} (2020) |
+| {{ add $i 1 }} | {{ $u.Score }} | {{ mdImage $u.AvatarURL }} | {{ mdUsername $u }} | {{ mdStars $u }} | {{ mdTeamID $u }} | {{ index $u.Submissions "2022" }} (2022) <br /> {{ index $u.Submissions "2021" }} (2021) <br /> {{ index $u.Submissions "2020" }} (2020) |
 {{- end}}
 
 ### Team Leaderboard
