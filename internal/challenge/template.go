@@ -3,17 +3,19 @@ package challenge
 import (
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 	"text/template"
 )
 
-func UpdateReadme(users []User, teams []Team) error {
+func UpdateReadme(users []*User, teams []*Team) error {
 	utilityFuncs := template.FuncMap{
-		"add":        add,
-		"mdImage":    mdImage,
-		"mdUsername": mdUsername,
-		"mdStars":    mdStars,
-		"mdTeamID":   mdTeamID,
+		"add":             add,
+		"mdImage":         mdImage,
+		"mdUsername":      mdUsername,
+		"mdStars":         mdStars,
+		"mdTeamID":        mdTeamID,
+		"sortByYearScore": sortByYearScore,
 	}
 
 	readmeTemplate, err := template.New("README.md.tmpl").Funcs(utilityFuncs).ParseFiles("assets/README.md.tmpl")
@@ -28,9 +30,11 @@ func UpdateReadme(users []User, teams []Team) error {
 	defer readme.Close()
 
 	templateData := struct {
-		Users []User
-		Teams []Team
+		Years []string
+		Users []*User
+		Teams []*Team
 	}{
+		Years: years,
 		Users: users,
 		Teams: teams,
 	}
@@ -63,10 +67,10 @@ func mdTeamID(u User) string {
 	return u.Team.ID
 }
 
-func mdStars(u User) string {
+func mdStars(userStats Stats) string {
 	builder := strings.Builder{}
 
-	for _, star := range u.Stars {
+	for _, star := range userStats.Stars {
 		switch star {
 		case NoStar:
 			builder.WriteString("➖")
@@ -78,4 +82,23 @@ func mdStars(u User) string {
 	}
 
 	return builder.String()
+}
+
+func sortByYearScore(year string, users []*User) []*User {
+	sort.Slice(users, func(i, j int) bool {
+		if users[i].Stats[year].Score != users[j].Stats[year].Score {
+			return users[i].Stats[year].Score > users[j].Stats[year].Score
+		}
+
+		if users[i].Username == "" && users[j].Username == "" {
+			return users[i].Name < users[j].Name
+		}
+		if users[i].Username != "" && users[j].Username != "" {
+			return users[i].Username < users[j].Username
+		}
+
+		return users[i].Username != ""
+	})
+
+	return users
 }

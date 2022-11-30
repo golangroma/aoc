@@ -20,24 +20,34 @@ Sul sito ufficiale troverete dal 1° al 25 Dicembre un nuovo quiz da risolvere. 
 
 La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
-## Leaderboards
+# Leaderboards
+
+{{- $users := .Users }}
+{{- $teams := .Teams }}
+{{- range $indexYear, $year := .Years}}
+{{- $users = sortByYearScore $year $users }}
+
+## {{ $year }}
 
 ### User Leaderboard
 
-| # | Score | User  | | Stars | Team  | Submissions  | 
+| # | Score | User  | | Stars | Team  | Submitted Solutions  | 
 |---|-------|-------|-|-------|-------|--------------|
-{{- range $i, $u := .Users}}
-| {{ add $i 1 }} | {{ $u.Score }} | {{ mdImage $u.AvatarURL }} | {{ mdUsername $u }} | {{ mdStars $u }} | {{ mdTeamID $u }} | {{ index $u.Submissions "2022" }} (2022) <br /> {{ index $u.Submissions "2021" }} (2021) <br /> {{ index $u.Submissions "2020" }} (2020) |
+{{- range $i, $u := $users }}
+{{- $stats := index $u.Stats $year }}
+| {{ add $i 1 }} | {{ $stats.Score }} | {{ mdImage $u.AvatarURL }} | {{ mdUsername $u }} | {{ mdStars $stats }} | {{ mdTeamID $u }} | {{ $stats.Submissions }} |
 {{- end}}
 
 ### Team Leaderboard
 
-| # | Team  | Submissions  | 
-|---|-------|--------------|
-{{- range $i, $t := .Teams}}
-| {{ add $i 1 }} | {{ $t.ID }} | - |
+| # | Score | Team  | Submitted Solutions  | 
+|---|-------|-------|--------------|
+{{- range $i, $t := $teams }}
+{{- $teamStats := index $t.Stats $year }}
+| {{ add $i 1 }} | {{ $teamStats.Score }} | {{ $t.ID }} | {{ $teamStats.Submissions }} |
 {{- end}}
 
+{{- end}}
 
 ## Submissions
 

@@ -12,15 +12,14 @@ type Participant struct {
 }
 
 type Teams struct {
-	Teams        []Team        `yaml:"team"`
+	Teams        []*Team       `yaml:"team"`
 	Participants []Participant `yaml:"participants"`
 }
 
 type Team struct {
-	ID          string   `yaml:"id"`
-	Members     []string `yaml:"members"`
-	Score       int
-	Submissions int
+	ID      string   `yaml:"id"`
+	Members []string `yaml:"members"`
+	Stats   map[string]Stats
 }
 
 func LoadTeams() (*Teams, error) {

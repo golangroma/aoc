@@ -4,7 +4,6 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
-	"sort"
 	"strconv"
 	"strings"
 
@@ -23,18 +22,23 @@ func Execute(session string) error {
 	// get users from teams.yaml file
 	users := GetUsersFromTeams(teams)
 
-	// load the AoC leaderboard
+	// load the AoC leaderboards by year
 	client := aoc.NewClient(session)
-	leaderboard, err := client.GetLeaderboard("2022")
-	if err != nil {
-		return err
+
+	leaderboardsByYear := make(map[string]*aoc.Leaderboard)
+	for _, year := range years {
+		leaderboard, err := client.GetLeaderboard(year)
+		if err != nil {
+			return err
+		}
+		leaderboardsByYear[year] = leaderboard
 	}
 
-	// add the users missing in the teams.yaml but in the leaderboard
-	users = MergeUsers(leaderboard, users)
+	// add the users missing in the teams.yaml but in the leaderboard (pick the first one, users are the same)
+	users = MergeUsers(leaderboardsByYear[years[0]], users)
 
 	// get scores and stars from the leaderboard
-	err = AssignScores(leaderboard, users)
+	err = AssignScores(leaderboardsByYear, users)
 	if err != nil {
 		return err
 	}
@@ -44,27 +48,19 @@ func Execute(session string) error {
 		return err
 	}
 
-	// sort users by score
-	sort.Slice(users, func(i, j int) bool {
-		if users[i].Score != users[j].Score {
-			return users[i].Score > users[j].Score
-		}
-		return users[i].Username < users[j].Username
-	})
-
 	return UpdateReadme(users, teams.Teams)
 }
 
 // MergeUsers will add the users in the leaderboard that are missing in the teams.yaml
-func MergeUsers(leaderboard *aoc.Leaderboard, users []User) []User {
+func MergeUsers(leaderboard *aoc.Leaderboard, users []*User) []*User {
 	teamsUsersMap := make(map[string]*User)
 	for _, user := range users {
-		teamsUsersMap[strconv.Itoa(user.AocID)] = &user
+		teamsUsersMap[strconv.Itoa(user.AocID)] = user
 	}
 
 	for aocID, member := range leaderboard.Members {
 		if _, found := teamsUsersMap[aocID]; !found { // if not found
-			users = append(users, User{
+			users = append(users, &User{
 				AocID: member.ID,
 				Name:  member.Name,
 			})
@@ -74,35 +70,54 @@ func MergeUsers(leaderboard *aoc.Leaderboard, users []User) []User {
 	return users
 }
 
-func AssignScores(leaderboard *aoc.Leaderboard, users []User) error {
-	for i, user := range users {
-
-		// find user from leaderboard
-		aocID := strconv.Itoa(user.AocID)
-		aocMember, found := leaderboard.Members[aocID]
+func AssignScores(leaderboards map[string]*aoc.Leaderboard, users []*User) error {
+	for _, year := range years {
+		leaderboard, found := leaderboards[year]
 		if !found {
 			continue
 		}
 
-		// assign the local_score to him
-		user.Score = aocMember.LocalScore
-		if user.Team != nil {
-			user.Team.Score += user.Score
-		}
+		for i, user := range users {
 
-		// check for the stars completions
-		for day := 1; day <= 25; day++ {
-			dayLevel := aocMember.CompletionDayLevel.GetDayLevel(day)
-
-			if dayLevel.LevelOneCompleted() {
-				user.Stars[day-1] = SilverStar
+			// find user from leaderboard
+			aocID := strconv.Itoa(user.AocID)
+			aocMember, found := leaderboard.Members[aocID]
+			if !found {
+				continue
 			}
-			if dayLevel.LevelTwoCompleted() {
-				user.Stars[day-1] = GoldStar
-			}
-		}
 
-		users[i] = user
+			// assign the local_score to him
+			userStats := Stats{}
+
+			userStats.Score = aocMember.LocalScore
+			if user.Team != nil {
+				if user.Team.Stats == nil {
+					user.Team.Stats = make(map[string]Stats)
+				}
+				teamStats := user.Team.Stats[year]
+				teamStats.Score += userStats.Score
+				user.Team.Stats[year] = teamStats
+			}
+
+			// check for the stars completions
+			for day := 1; day <= 25; day++ {
+				dayLevel := aocMember.CompletionDayLevel.GetDayLevel(day)
+
+				if dayLevel.LevelOneCompleted() {
+					userStats.Stars[day-1] = SilverStar
+				}
+				if dayLevel.LevelTwoCompleted() {
+					userStats.Stars[day-1] = GoldStar
+				}
+			}
+
+			if user.Stats == nil {
+				user.Stats = make(map[string]Stats)
+			}
+			user.Stats[year] = userStats
+
+			users[i] = user
+		}
 	}
 
 	return nil
@@ -110,10 +125,10 @@ func AssignScores(leaderboard *aoc.Leaderboard, users []User) error {
 
 type UserSubmissionsByYear map[string]int
 
-func AssignSubmissions(users []User) error {
+func AssignSubmissions(users []*User) error {
 	userMap := make(map[string]*User)
 	for _, u := range users {
-		userMap[u.Username] = &u
+		userMap[u.Username] = u
 	}
 
 	for _, year := range years {
@@ -123,10 +138,16 @@ func AssignSubmissions(users []User) error {
 				username := d.Name()
 
 				if u, found := userMap[username]; found {
-					if u.Submissions == nil {
-						u.Submissions = make(UserSubmissionsByYear)
+
+					userStats := u.Stats[year]
+					userStats.Submissions++
+					u.Stats[year] = userStats
+
+					if u.Team != nil {
+						teamStats := u.Team.Stats[year]
+						teamStats.Submissions++
+						u.Team.Stats[year] = teamStats
 					}
-					u.Submissions[year]++
 
 					userMap[username] = u
 				}
