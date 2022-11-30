@@ -4,6 +4,7 @@ import "fmt"
 
 type User struct {
 	AocID       int
+	Name        string
 	Username    string
 	Avatar      string
 	Team        *Team

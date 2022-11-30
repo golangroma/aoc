@@ -30,6 +30,9 @@ func Execute(session string) error {
 		return err
 	}
 
+	// add the users missing in the teams.yaml but in the leaderboard
+	users = MergeUsers(leaderboard, users)
+
 	// get scores and stars from the leaderboard
 	err = AssignScores(leaderboard, users)
 	if err != nil {
@@ -50,6 +53,25 @@ func Execute(session string) error {
 	})
 
 	return UpdateReadme(users, teams.Teams)
+}
+
+// MergeUsers will add the users in the leaderboard that are missing in the teams.yaml
+func MergeUsers(leaderboard *aoc.Leaderboard, users []User) []User {
+	teamsUsersMap := make(map[string]*User)
+	for _, user := range users {
+		teamsUsersMap[strconv.Itoa(user.AocID)] = &user
+	}
+
+	for aocID, member := range leaderboard.Members {
+		if _, found := teamsUsersMap[aocID]; !found { // if not found
+			users = append(users, User{
+				AocID: member.ID,
+				Name:  member.Name,
+			})
+		}
+	}
+
+	return users
 }
 
 func AssignScores(leaderboard *aoc.Leaderboard, users []User) error {
