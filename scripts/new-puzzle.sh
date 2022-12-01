@@ -10,6 +10,7 @@ DAY=$(printf %02d $2)
 mkdir -p ./$YEAR/day$DAY/$USERNAME
 cp ./template/* ./$YEAR/day$DAY/$USERNAME
 cd ./$YEAR/day$DAY/$USERNAME
+go mod init github.com/golangroma/aoc
 
 if [[ -z $session ]]; then
     echo "Missing 'Advent of Code' session. Cannot download input."

@@ -1,3 +1,5 @@
 .env
 .vscode
 /aoc
+/go.mod
+/go.sum
