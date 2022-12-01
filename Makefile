@@ -1,5 +1,8 @@
 build:
-	go build -o aoc ./cmd/aoc/main.go
+	cd cli && go build -o ../aoc .
 
 test:
-	go test -v $(shell go list ./... | grep -v template)
+	cd cli && go test -v $(shell cd cli && go list ./... | grep -v template)
+
+tidy:
+	find . -name go.mod -execdir go mod tidy \;

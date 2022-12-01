@@ -23,11 +23,11 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      run: make
+      run: make build
 
     - name: Test
       run: make test
-      
+
     - name: Run
       run: ./aoc
       env:
@@ -41,4 +41,3 @@ jobs:
           git commit -am "Automated commit"
           git push
         fi
-        
