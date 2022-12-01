@@ -1,9 +1,27 @@
 
 participants:
-- enrichman
-- luigibarbato
 
-# 
+- aoc_id: 504742
+  name: enrichman
+- name: luigibarbato
+- aoc_id: 2284430
+  name: giulianopz
+- name: omissis
+- aoc_id: 731816
+  name: mastrogiovanni
+- aoc_id: 1599019
+  name: Al-Pragliola
+- aoc_id: 373470
+  name: lucianoq
+- aoc_id: 2292598
+  name: alessio-perugini
+- aoc_id: 2322348
+  name: fdonzello
+- aoc_id: 1247572
+  name: mbiagetti
+- aoc_id: 2405432
+  name: 8lall0
+#
 # Join a team by adding your name to it!
 #
 team:
@@ -12,8 +30,22 @@ team:
   members:
   - enrichman
   - giulianopz
+  - mastrogiovanni
+  - lucianoq
+  - alessio-perugini
+  - mbiagetti
 
 - id: golangnapoli
   link: https://golangnapoli.it
   members:
   - luigibarbato
+  - Al-Pragliola
+
+- id: golangtorino
+  link: https://www.meetup.com/golang-torino/
+  members:
+  - omissis
+
+- id: golangmilano
+  link: https://www.meetup.com/golang-milano/
+  members: []

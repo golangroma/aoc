@@ -3,12 +3,12 @@ package main
 import (
 	"strconv"
 
-	"github.com/golangroma/aoc/util"
+	"github.com/golangroma/aoc/utils"
 )
 
 func PartOne(input []string) string {
-	measurements, err := util.Convert(input, util.StringSliceToIntSliceConverter)
-	util.CheckErr(err)
+	measurements, err := utils.Convert(input, utils.StringSliceToIntSliceConverter)
+	utils.CheckErr(err)
 
 	count := 0
 
@@ -25,8 +25,8 @@ func PartOne(input []string) string {
 }
 
 func PartTwo(input []string) string {
-	measurements, err := util.Convert(input, util.StringSliceToIntSliceConverter)
-	util.CheckErr(err)
+	measurements, err := utils.Convert(input, utils.StringSliceToIntSliceConverter)
+	utils.CheckErr(err)
 
 	count := 0
 

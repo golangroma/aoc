@@ -6,7 +6,13 @@ import (
 	"github.com/golangroma/aoc/utils"
 )
 
-var sample string = ``
+var sample string = `
+forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2`
 
 func TestPartOne(t *testing.T) {
 	tt := []struct {
@@ -17,7 +23,7 @@ func TestPartOne(t *testing.T) {
 		{
 			name:     "example",
 			input:    sample,
-			expected: "not-yet-implemented",
+			expected: "150",
 		},
 	}
 
@@ -40,7 +46,7 @@ func TestPartTwo(t *testing.T) {
 		{
 			name:     "example",
 			input:    sample,
-			expected: "not-yet-implemented",
+			expected: "900",
 		},
 	}
 

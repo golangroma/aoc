@@ -1,0 +1,72 @@
+# Advent Of Code - Golang Italia
+
+Sfida "ufficiale" per l'[Advent of Code](https://adventofcode.com/) degli appassionati di Go in Italia! :it:
+
+## Di che si tratta?
+
+L'Advent of Code è un calendario dell'avvento con piccoli quiz di programmazione.  
+
+In questo repository vogliamo raccogliere le soluzioni in *Go* della community italiana, e sfidare le varie community locali (Roma, Torino, Milano, Napoli e magari altre!).
+
+
+## Come funziona?
+
+Dopo esservi iscritti utilizzate il codice di accesso `<cinque><zero>4742-765328a3` su https://adventofcode.com/2022/leaderboard/private ed aggiungetevi nel [`teams.yaml`](./teams.yaml) con il vostro ID (lo potrete trovare nei vostri [settings](https://adventofcode.com/2022/settings)).  
+
+Sul sito ufficiale troverete dal 1° al 25 Dicembre un nuovo quiz da risolvere. Dopo averlo risolto se volete potrete pubblicare qui la vostra soluzinoe, e condividerla con la community.
+
+
+## Cosa si vince?
+
+La gloria eterna! E forse anche un piccolo premio, vedremo! :D
+
+# Leaderboards
+
+{{- $users := .Users }}
+{{- $teams := .Teams }}
+{{- range $indexYear, $year := .Years}}
+{{- $users = sortByYearScore $year $users }}
+
+## {{ $year }}
+
+### User Leaderboard
+
+| # | Score | User  | | Stars | Team  | Submitted Solutions  | 
+|---|-------|-------|-|-------|-------|--------------|
+{{- range $i, $u := $users }}
+{{- $stats := index $u.Stats $year }}
+| {{ add $i 1 }} | {{ $stats.Score }} | {{ mdImage $u.AvatarURL }} | {{ mdUsername $u }} | {{ mdStars $stats }} | {{ mdTeamID $u }} | {{ $stats.Submissions }} |
+{{- end}}
+
+### Team Leaderboard
+
+| # | Score | Team  | Submitted Solutions  | 
+|---|-------|-------|--------------|
+{{- range $i, $t := $teams }}
+{{- $teamStats := index $t.Stats $year }}
+| {{ add $i 1 }} | {{ $teamStats.Score }} | {{ $t.ID }} | {{ $teamStats.Submissions }} |
+{{- end}}
+
+{{- end}}
+
+## Submissions
+
+Le soluzioni condivise NON concorrono alla classifica. Potete caricare la vostra sotto `<YYYY>/day<DD>/username`.  
+
+Lo script `new-puzzle.sh` creerà un po' di scaffolding, scaricando anche il file di input da testare.
+
+Per utilizzarlo copiate il file `.env.sample` in `.env`, e modificatelo aggiungendo il vostro `USERNAME` ed il cookie `session` del sito dell'Advent of Code.  
+
+```
+-> % cp .env.sample .env
+```
+```
+# .env
+
+USERNAME=enrichman
+session=my-super-secret-session
+```
+```
+-> % ./scripts/new-puzzle.sh 2022 1                                                                                                  
+You can now run 'cd ./2022/day01/enrichman' and work on your solution!
+```

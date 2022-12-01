@@ -6,7 +6,20 @@ import (
 	"github.com/golangroma/aoc/utils"
 )
 
-var sample string = ``
+var sample string = `1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000`
 
 func TestPartOne(t *testing.T) {
 	tt := []struct {
@@ -17,7 +30,7 @@ func TestPartOne(t *testing.T) {
 		{
 			name:     "example",
 			input:    sample,
-			expected: "not-yet-implemented",
+			expected: "24000",
 		},
 	}
 
@@ -40,7 +53,7 @@ func TestPartTwo(t *testing.T) {
 		{
 			name:     "example",
 			input:    sample,
-			expected: "not-yet-implemented",
+			expected: "45000",
 		},
 	}
 
