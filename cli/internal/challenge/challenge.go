@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/golangroma/aoc/pkg/aoc"
+	"github.com/golangroma/aoc/cli/pkg/aoc"
 )
 
 var years = []string{"2022", "2021", "2020"}

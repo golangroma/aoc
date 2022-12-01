@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/golangroma/aoc/utils"
+	"github.com/golangroma/aoc/cli/utils"
 )
 
 func main() {

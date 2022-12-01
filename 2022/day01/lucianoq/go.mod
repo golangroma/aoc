@@ -1,4 +1,4 @@
-module github.com/golangroma/aoc
+module github.com/golangroma/aoc/2022/day01/lucianoq
 
 go 1.18
 

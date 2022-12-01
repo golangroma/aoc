@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/golangroma/aoc/utils"
+	"github.com/golangroma/aoc/cli/utils"
 )
 
 var sample string = `1000

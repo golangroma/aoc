@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/golangroma/aoc/internal/challenge"
+	"github.com/golangroma/aoc/cli/internal/challenge"
 )
 
 func main() {

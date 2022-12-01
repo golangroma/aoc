@@ -3,7 +3,7 @@ package main
 import (
 	"strconv"
 
-	"github.com/golangroma/aoc/utils"
+	"github.com/golangroma/aoc/cli/utils"
 )
 
 func PartOne(input []string) string {

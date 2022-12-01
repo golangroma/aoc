@@ -1,6 +1,6 @@
-module github.com/golangroma/aoc/2022/day01/alessio-perugini
+module github.com/golangroma/aoc/cli
 
-go 1.18
+go 1.19
 
 require (
 	github.com/pkg/errors v0.9.1

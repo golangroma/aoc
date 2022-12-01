@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/golangroma/aoc/utils"
+	"github.com/golangroma/aoc/cli/utils"
 )
 
 type Command struct {

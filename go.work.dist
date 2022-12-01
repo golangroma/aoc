@@ -1,0 +1,6 @@
+go 1.18
+
+use (
+	./cli
+	./2022/dayXX/userYY
+)

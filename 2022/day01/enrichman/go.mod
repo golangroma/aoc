@@ -1,4 +1,4 @@
-module github.com/golangroma/aoc
+module github.com/golangroma/aoc/2022/day01/enrichman
 
 go 1.18
 

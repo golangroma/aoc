@@ -1,4 +1,4 @@
-module github.com/golangroma/aoc
+module github.com/golangroma/aoc/2022/day01/Al-Pragliola
 
 go 1.18
 
