@@ -34,7 +34,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | 4 | 10 | ![https://github.com/enrichman.png?size=60](https://github.com/enrichman.png?size=60) | [enrichman](https://github.com/enrichman) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 1 |
 | 5 | 10 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 6 | 9 | ![https://github.com/mbiagetti.png?size=60](https://github.com/mbiagetti.png?size=60) | [mbiagetti](https://github.com/mbiagetti) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
-| 7 | 4 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | ⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
+| 7 | 7 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 8 | 0 | ![https://github.com/8lall0.png?size=60](https://github.com/8lall0.png?size=60) | [8lall0](https://github.com/8lall0) | ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ |  | 0 |
 | 9 | 0 | ![https://github.com/fdonzello.png?size=60](https://github.com/fdonzello.png?size=60) | [fdonzello](https://github.com/fdonzello) | ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ |  | 0 |
 | 10 | 0 | ![https://github.com/luigibarbato.png?size=60](https://github.com/luigibarbato.png?size=60) | [luigibarbato](https://github.com/luigibarbato) | ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 0 |
@@ -44,7 +44,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
-| 1 | 65 | golangroma | 3 |
+| 1 | 68 | golangroma | 3 |
 | 2 | 16 | golangnapoli | 1 |
 | 3 | 0 | golangtorino | 0 |
 | 4 | 0 | golangmilano | 0 |
