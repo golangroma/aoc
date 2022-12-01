@@ -37,7 +37,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | 7 | 9 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 8 | 6 | ![https://github.com/omissis.png?size=60](https://github.com/omissis.png?size=60) | [omissis](https://github.com/omissis) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 0 |
 | 9 | 4 | ![https://github.com/fdonzello.png?size=60](https://github.com/fdonzello.png?size=60) | [fdonzello](https://github.com/fdonzello) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ |  | 0 |
-| 10 | 0 | ![https://github.com/8lall0.png?size=60](https://github.com/8lall0.png?size=60) | [8lall0](https://github.com/8lall0) | ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 0 |
+| 10 | 1 | ![https://github.com/8lall0.png?size=60](https://github.com/8lall0.png?size=60) | [8lall0](https://github.com/8lall0) | ⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 0 |
 | 11 | 0 | ![https://github.com/luigibarbato.png?size=60](https://github.com/luigibarbato.png?size=60) | [luigibarbato](https://github.com/luigibarbato) | ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 0 |
 
 ### Team Leaderboard
@@ -46,7 +46,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 |---|-------|-------|--------------|
 | 1 | 80 | golangroma | 4 |
 | 2 | 18 | golangnapoli | 1 |
-| 3 | 6 | golangtorino | 0 |
+| 3 | 7 | golangtorino | 0 |
 | 4 | 0 | golangmilano | 0 |
 
 ## 2021
