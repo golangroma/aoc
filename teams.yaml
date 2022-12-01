@@ -17,6 +17,9 @@ participants:
   name: alessio-perugini
 - aoc_id: 2322348
   name: fdonzello
+- aoc_id: 1247572
+  name: mbiagetti
+
 #
 # Join a team by adding your name to it!
 #
@@ -29,6 +32,7 @@ team:
   - mastrogiovanni
   - lucianoq
   - alessio-perugini
+  - mbiagetti
 
 - id: golangnapoli
   link: https://golangnapoli.it
