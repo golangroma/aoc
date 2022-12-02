@@ -27,17 +27,17 @@ func PartOne(input []string) string {
 
 	for _, v := range input {
 		matchPredictions := strings.Split(v, " ")
-		opponentChoise := parseChoise(matchPredictions[0])
-		prediction := parseChoise(matchPredictions[1])
+		opponentChoice := parseChoice(matchPredictions[0])
+		prediction := parseChoice(matchPredictions[1])
 
-		totalScore += round(opponentChoise, prediction)
+		totalScore += round(opponentChoice, prediction)
 
 	}
 
 	return fmt.Sprintf("%d", totalScore)
 }
 
-func parseChoise(c string) HandShape {
+func parseChoice(c string) HandShape {
 	switch c {
 	case "A", "X":
 		return Rock
@@ -106,10 +106,10 @@ func PartTwo(input []string) string {
 
 	for _, v := range input {
 		matchPredictions := strings.Split(v, " ")
-		opponentChoise := parseChoise(matchPredictions[0])
-		prediction := parseChoiseStrategically(opponentChoise, matchPredictions[1])
+		opponentChoice := parseChoice(matchPredictions[0])
+		prediction := parseChoiseStrategically(opponentChoice, matchPredictions[1])
 
-		totalScore += round(opponentChoise, prediction)
+		totalScore += round(opponentChoice, prediction)
 	}
 
 	return fmt.Sprintf("%d", totalScore)
