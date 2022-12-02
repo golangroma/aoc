@@ -21,12 +21,12 @@ func PartOne(input []string) string {
 	totalRulesMap := map[string]int{
 		"A X": 4, // Rock/Rock/Draw
 		"A Y": 8, // Rock/Paper/Win
-		"A Z": 3, // Rock/Scissors/Loose
-		"B X": 1, // Paper/Rock/Loose
+		"A Z": 3, // Rock/Scissors/Lose
+		"B X": 1, // Paper/Rock/Lose
 		"B Y": 5, // Paper/Paper/Draw
 		"B Z": 9, // Paper/Scissors/Win
 		"C X": 7, // Scissors/Rock/Win
-		"C Y": 2, // Scissors/Paper/Loose
+		"C Y": 2, // Scissors/Paper/Lose
 		"C Z": 6, // Scissors/Scissors/Draw
 	}
 
@@ -72,11 +72,11 @@ func getHandsetStrategically(opponent, me string) int {
 	case "A":
 		// "A X": 4, // Rock/Rock/Draw
 		// "A Y": 8, // Rock/Paper/Win
-		// "A Z": 3, // Rock/Scissors/Loose
+		// "A Z": 3, // Rock/Scissors/Lose
 		if me == "X" {
 			// Rock/Scissors
-			// from Draw to Loose
-			// "A Z": 3, // Rock/Scissors/Loose
+			// from Draw to Lose
+			// "A Z": 3, // Rock/Scissors/Lose
 			rc = 3
 		} else if me == "Y" {
 			// Rock/Paper
@@ -84,19 +84,19 @@ func getHandsetStrategically(opponent, me string) int {
 			// "A X": 4, // Rock/Rock/Draw
 			rc = 4
 		} else if me == "Z" {
-			// Rock/Scissors/Loose
-			// From Loose to Win
+			// Rock/Scissors/Lose
+			// From Lose to Win
 			// "A Y": 8, // Rock/Paper/Win
 			rc = 8
 		}
 	case "B":
-		// "B X": 1, // Paper/Rock/Loose
+		// "B X": 1, // Paper/Rock/Lose
 		// "B Y": 5, // Paper/Paper/Draw
 		// "B Z": 9, // Paper/Scissors/Win
 		if me == "X" {
 			// Paper/Rock
-			// from Loose to Loose
-			// "B X": 1, // Paper/Rock/Loose
+			// from Lose to Lose
+			// "B X": 1, // Paper/Rock/Lose
 			rc = 1
 		} else if me == "Y" {
 			// Paper/Paper
@@ -111,16 +111,16 @@ func getHandsetStrategically(opponent, me string) int {
 		}
 	case "C":
 		// "C X": 7, // Scissors/Rock/Win
-		// "C Y": 2, // Scissors/Paper/Loose
+		// "C Y": 2, // Scissors/Paper/Lose
 		// "C Z": 6, // Scissors/Scissors/Draw
 		if me == "X" {
 			// Scissors/Rock
-			// From Win to Loose
-			// "C Y": 2, // Scissors/Paper/Loose
+			// From Win to Lose
+			// "C Y": 2, // Scissors/Paper/Lose
 			rc = 2
 		} else if me == "Y" {
 			// Scissors/Paper
-			// From Loose to Draw
+			// From Lose to Draw
 			// "C Z": 6, // Scissors/Scissors/Draw
 			rc = 6
 		} else if me == "Z" {
