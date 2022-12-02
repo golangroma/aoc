@@ -6,7 +6,8 @@ participants:
 - name: luigibarbato
 - aoc_id: 2284430
   name: giulianopz
-- name: omissis
+- aoc_id: 2432594
+  name: omissis
 - aoc_id: 731816
   name: mastrogiovanni
 - aoc_id: 1599019
@@ -45,6 +46,7 @@ team:
   link: https://www.meetup.com/golang-torino/
   members:
   - omissis
+  - 8lall0
 
 - id: golangmilano
   link: https://www.meetup.com/golang-milano/
