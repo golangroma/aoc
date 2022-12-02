@@ -22,6 +22,9 @@ participants:
   name: mbiagetti
 - aoc_id: 2405432
   name: 8lall0
+- aoc_id: 2527273
+  name: misterdelle
+
 #
 # Join a team by adding your name to it!
 #
@@ -35,6 +38,7 @@ team:
   - lucianoq
   - alessio-perugini
   - mbiagetti
+  - misterdelle
 
 - id: golangnapoli
   link: https://golangnapoli.it
