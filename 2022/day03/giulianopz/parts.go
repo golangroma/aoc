@@ -31,8 +31,7 @@ func PartOne(input []string) string {
 		for i, c := range firstHalf {
 			if i == 0 || (firstHalf[i] != firstHalf[i-1]) {
 				if strings.Contains(secondHalf, c) {
-					prior := priority(c)
-					totalPriorities += prior
+					totalPriorities += priority(c)
 				}
 			}
 		}
@@ -57,5 +56,23 @@ func priority(s string) int {
 }
 
 func PartTwo(input []string) string {
-	return ""
+
+	var totalPriorities, i int
+	for i < len(input) {
+
+		firstRucksack := strings.Split(input[i], "")
+		secondRucksack := input[i+1]
+		thirdRucksack := input[i+2]
+
+		sort.Strings(firstRucksack)
+		for i, c := range firstRucksack {
+			if i == 0 || (firstRucksack[i] != firstRucksack[i-1]) {
+				if strings.Contains(secondRucksack, c) && strings.Contains(thirdRucksack, c) {
+					totalPriorities += priority(c)
+				}
+			}
+		}
+		i = i + 3
+	}
+	return fmt.Sprintf("%d", totalPriorities)
 }
