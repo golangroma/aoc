@@ -31,11 +31,11 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | 1 | 70 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 3 |
 | 2 | 62 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 2 |
 | 3 | 55 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 3 |
-| 4 | 51 | ![https://github.com/alessio-perugini.png?size=60](https://github.com/alessio-perugini.png?size=60) | [alessio-perugini](https://github.com/alessio-perugini) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 2 |
+| 4 | 51 | ![https://github.com/alessio-perugini.png?size=60](https://github.com/alessio-perugini.png?size=60) | [alessio-perugini](https://github.com/alessio-perugini) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 3 |
 | 5 | 48 | ![https://github.com/mbiagetti.png?size=60](https://github.com/mbiagetti.png?size=60) | [mbiagetti](https://github.com/mbiagetti) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 6 | 44 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 3 |
 | 7 | 38 | ![https://github.com/enrichman.png?size=60](https://github.com/enrichman.png?size=60) | [enrichman](https://github.com/enrichman) | 🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 2 |
-| 8 | 26 | ![https://github.com/misterdelle.png?size=60](https://github.com/misterdelle.png?size=60) | [misterdelle](https://github.com/misterdelle) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 2 |
+| 8 | 26 | ![https://github.com/misterdelle.png?size=60](https://github.com/misterdelle.png?size=60) | [misterdelle](https://github.com/misterdelle) | 🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 3 |
 | 9 | 13 | ![https://github.com/8lall0.png?size=60](https://github.com/8lall0.png?size=60) | [8lall0](https://github.com/8lall0) | 🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 2 |
 | 10 | 12 |  | T Rex | 🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ |  | 0 |
 | 11 | 10 | ![https://github.com/omissis.png?size=60](https://github.com/omissis.png?size=60) | [omissis](https://github.com/omissis) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 1 |
@@ -46,7 +46,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
-| 1 | 332 | golangroma | 15 |
+| 1 | 332 | golangroma | 17 |
 | 2 | 62 | golangnapoli | 2 |
 | 3 | 23 | golangtorino | 3 |
 | 4 | 0 | golangmilano | 0 |
