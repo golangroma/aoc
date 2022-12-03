@@ -233,10 +233,10 @@ func findCommonCharPointsByThree(s1, s2, s3 string) int {
 				if r == rr && rr == rrr {
 					if rrr >= 65 && rrr <= 90 {
 						// Uppercase
-						rc = int(uppercaseMap[string(rr)])
+						rc = int(uppercaseMap[string(rrr)])
 					} else {
 						// Lowercase
-						rc = int(lowercaseMap[string(rr)])
+						rc = int(lowercaseMap[string(rrr)])
 					}
 				}
 			}
