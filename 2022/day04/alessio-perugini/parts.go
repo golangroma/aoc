@@ -43,11 +43,10 @@ func PartTwo(input []string) string {
 		min1, max1 := parsePairRange(pairs[0])
 		min2, max2 := parsePairRange(pairs[1])
 
-		if (min1 >= min2 && min1 <= max2) ||
-			(min2 >= min1 && min2 <= max1) ||
-			(max1 >= min2 && max1 <= max2) {
-			cnt++
+		if max1 < min2 || max2 < min1 {
+			continue
 		}
+		cnt++
 	}
 
 	return fmt.Sprintf("%d", cnt)
