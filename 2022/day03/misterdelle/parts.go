@@ -5,73 +5,6 @@ import (
 	"strconv"
 )
 
-type LowercasePriority int
-
-const (
-	unknown LowercasePriority = iota
-	a
-	b
-	c
-	d
-	e
-	f
-	g
-	h
-	i
-	j
-	k
-	l
-	m
-	n
-	o
-	p
-	q
-	r
-	s
-	t
-	u
-	v
-	w
-	x
-	y
-	z
-)
-
-type UppercasePriority int
-
-const (
-	Unknown UppercasePriority = iota + 26
-	A
-	B
-	C
-	D
-	E
-	F
-	G
-	H
-	I
-	J
-	K
-	L
-	M
-	N
-	O
-	P
-	Q
-	R
-	S
-	T
-	U
-	V
-	W
-	X
-	Y
-	Z
-)
-
-var lowercaseMap = make(map[string]LowercasePriority)
-var uppercaseMap = make(map[string]UppercasePriority)
-
 func PartOne(input []string) string {
 	//
 	// DLzSMtDLtzmmlDlMlMDbcrcTDqFvVvVqqTbD
@@ -79,7 +12,6 @@ func PartOne(input []string) string {
 	// DLzSMtDLtzmmlDlMlM
 	// DbcrcTDqFvVvVqqTbD
 	//
-	initMaps()
 
 	totalPoints := 0
 
@@ -97,7 +29,6 @@ func PartTwo(input []string) string {
 	// vplSlfdfGvfRRGsgNcMglsFWMWMC
 	// jtjvFHdjjwqrwqwL
 	//
-	initMaps()
 
 	compartments := [3]string{}
 	totalPoints := 0
@@ -115,62 +46,6 @@ func PartTwo(input []string) string {
 	}
 
 	return strconv.Itoa(totalPoints)
-}
-
-func initMaps() {
-	lowercaseMap["a"] = a
-	lowercaseMap["b"] = b
-	lowercaseMap["c"] = c
-	lowercaseMap["d"] = d
-	lowercaseMap["e"] = e
-	lowercaseMap["f"] = f
-	lowercaseMap["g"] = g
-	lowercaseMap["h"] = h
-	lowercaseMap["i"] = i
-	lowercaseMap["j"] = j
-	lowercaseMap["k"] = k
-	lowercaseMap["l"] = l
-	lowercaseMap["m"] = m
-	lowercaseMap["n"] = n
-	lowercaseMap["o"] = o
-	lowercaseMap["p"] = p
-	lowercaseMap["q"] = q
-	lowercaseMap["r"] = r
-	lowercaseMap["s"] = s
-	lowercaseMap["t"] = t
-	lowercaseMap["u"] = u
-	lowercaseMap["v"] = v
-	lowercaseMap["w"] = w
-	lowercaseMap["x"] = x
-	lowercaseMap["y"] = y
-	lowercaseMap["z"] = z
-
-	uppercaseMap["A"] = A
-	uppercaseMap["B"] = B
-	uppercaseMap["C"] = C
-	uppercaseMap["D"] = D
-	uppercaseMap["E"] = E
-	uppercaseMap["F"] = F
-	uppercaseMap["G"] = G
-	uppercaseMap["H"] = H
-	uppercaseMap["I"] = I
-	uppercaseMap["J"] = J
-	uppercaseMap["K"] = K
-	uppercaseMap["L"] = L
-	uppercaseMap["M"] = M
-	uppercaseMap["N"] = N
-	uppercaseMap["O"] = O
-	uppercaseMap["P"] = P
-	uppercaseMap["Q"] = Q
-	uppercaseMap["R"] = R
-	uppercaseMap["S"] = S
-	uppercaseMap["T"] = T
-	uppercaseMap["U"] = U
-	uppercaseMap["V"] = V
-	uppercaseMap["W"] = W
-	uppercaseMap["X"] = X
-	uppercaseMap["Y"] = Y
-	uppercaseMap["Z"] = Z
 }
 
 func splitSubN(s string, n int) []string {
@@ -205,10 +80,10 @@ func findCommonCharPointsByTwo(s1, s2 string) int {
 			if r == rr {
 				if rr >= 65 && rr <= 90 {
 					// Uppercase
-					rc = int(uppercaseMap[string(rr)])
+					rc = int(rr) - 38
 				} else {
 					// Lowercase
-					rc = int(lowercaseMap[string(rr)])
+					rc = int(rr) - 96
 				}
 			}
 		}
@@ -233,10 +108,10 @@ func findCommonCharPointsByThree(s1, s2, s3 string) int {
 				if r == rr && rr == rrr {
 					if rrr >= 65 && rrr <= 90 {
 						// Uppercase
-						rc = int(uppercaseMap[string(rrr)])
+						rc = int(rrr) - 38
 					} else {
 						// Lowercase
-						rc = int(lowercaseMap[string(rrr)])
+						rc = int(rrr) - 96
 					}
 				}
 			}
