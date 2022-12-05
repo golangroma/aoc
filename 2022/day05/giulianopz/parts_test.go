@@ -49,7 +49,7 @@ func TestPartTwo(t *testing.T) {
 		{
 			name:     "example",
 			input:    sample,
-			expected: "not-yet-implemented",
+			expected: "MCD",
 		},
 	}
 
