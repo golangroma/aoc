@@ -15,7 +15,8 @@ func ReadFile(filename string) []string {
 }
 
 func SplitInput(content string) []string {
-	return strings.Split(content, "\n")
+	stringContent := strings.TrimSpace(string(content))
+	return strings.Split(stringContent, "\n")
 }
 
 func CheckErr(err error) {
