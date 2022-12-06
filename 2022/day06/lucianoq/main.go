@@ -16,14 +16,15 @@ func main() {
 }
 
 func findMarker(line string, length int) int {
-	seen := map[byte]struct{}{}
+	var seen int32
+
 	var left, right = 0, 0
 
 	// move `right` forward
 	for ; ; right++ {
 
 		// if we find a duplicate character
-		if _, ok := seen[line[right]]; ok {
+		if seen&(1<<(line[right]-'a')) != 0 {
 
 			// we move `left` forward, up to the next
 			// of the first occurrence of the duplicate
@@ -33,7 +34,7 @@ func findMarker(line string, length int) int {
 					left++
 					break
 				}
-				delete(seen, line[left])
+				seen &^= 1 << (line[left] - 'a')
 			}
 
 			// no need to add on `seen` (we didn't delete it)
@@ -42,7 +43,7 @@ func findMarker(line string, length int) int {
 			continue
 		}
 
-		seen[line[right]] = struct{}{}
+		seen |= 1 << (line[right] - 'a')
 
 		// if [left,right) is long enough, that's our goal
 		if right-left+1 == length {
@@ -50,4 +51,3 @@ func findMarker(line string, length int) int {
 		}
 	}
 }
-
