@@ -13,17 +13,21 @@ func prepend(element string, data []string) []string {
 
 func PartOne(input []string) string {
 
-	re, _ := regexp.Compile(`\w+\s(\d+)`)
+	re, err := regexp.Compile(`\w+\s(\d+)`)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	crates := make(map[int][]string, 0)
 	row := 0
-	col := 7
 	for _, line := range input {
 
 		if strings.Index(line, "[") != -1 {
 			for i := 0; i < len(line); i += 4 {
+
 				if string(line[i]) == "[" {
 					letter := string(line[i+1])
+
 					if letter != "" {
 						elements, ok := crates[row]
 						if !ok {
@@ -35,11 +39,9 @@ func PartOne(input []string) string {
 				row++
 			}
 			row = 0
-			col--
 		}
 
 		if re.MatchString(line) {
-
 			matches := re.FindAllStringSubmatch(line, -1)
 
 			num := asInt(matches[0][1])
@@ -50,8 +52,8 @@ func PartOne(input []string) string {
 
 			moving := source[len(source)-num:]
 			for len(moving) != 0 {
-				e := moving[len(moving)-1]
-				crates[to] = append(crates[to], e)
+				popped := moving[len(moving)-1]
+				crates[to] = append(crates[to], popped)
 				moving = moving[:len(moving)-1]
 			}
 			crates[from] = source[:len(source)-num]
@@ -66,17 +68,22 @@ func PartOne(input []string) string {
 }
 
 func PartTwo(input []string) string {
-	re, _ := regexp.Compile(`\w+\s(\d+)`)
+
+	re, err := regexp.Compile(`\w+\s(\d+)`)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	crates := make(map[int][]string, 0)
 	row := 0
-	col := 7
 	for _, line := range input {
 
 		if strings.Index(line, "[") != -1 {
 			for i := 0; i < len(line); i += 4 {
+
 				if string(line[i]) == "[" {
 					letter := string(line[i+1])
+
 					if letter != "" {
 						elements, ok := crates[row]
 						if !ok {
@@ -88,11 +95,9 @@ func PartTwo(input []string) string {
 				row++
 			}
 			row = 0
-			col--
 		}
 
 		if re.MatchString(line) {
-
 			matches := re.FindAllStringSubmatch(line, -1)
 
 			num := asInt(matches[0][1])
