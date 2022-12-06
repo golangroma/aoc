@@ -18,14 +18,14 @@ func calcMsgIdx(msg string, num int) int {
 	diffCharsNum := 0
 
 	for i := 0; i < len(msg); i++ {
-		diffChars := make(map[rune]int)
+		diffChars := make(map[byte]int)
 
 		for j := i; j < i+num; j++ {
-			if diffChars[rune(msg[j])] == 0 {
+			if diffChars[msg[j]] == 0 {
 				diffCharsNum++
 			}
 
-			diffChars[rune(msg[j])]++
+			diffChars[msg[j]]++
 		}
 
 		if diffCharsNum == num {
