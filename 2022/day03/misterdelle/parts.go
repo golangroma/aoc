@@ -106,7 +106,7 @@ func findCommonCharPointsByThree(s1, s2, s3 string) int {
 		for _, rr := range runes2 {
 			for _, rrr := range runes3 {
 				if r == rr && rr == rrr {
-					if rrr >= 65 && rrr <= 90 {
+					if rrr >= 'A' && rrr <= 'Z' {
 						// Uppercase
 						rc = int(rrr) - 38
 					} else {
