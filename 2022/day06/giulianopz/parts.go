@@ -20,9 +20,7 @@ func PartOne(input []string) string {
 				break
 			}
 		}
-		occurences = make(map[byte]int, 0)
 	}
-	occurences = make(map[byte]int, 0)
 	return fmt.Sprintf("%d", processedCharsNum)
 }
 
@@ -43,9 +41,7 @@ func PartTwo(input []string) string {
 				break
 			}
 		}
-		occurences = make(map[byte]int, 0)
 	}
-	occurences = make(map[byte]int, 0)
 	return fmt.Sprintf("%d", processedCharsNum)
 }
 
@@ -58,6 +54,7 @@ func incrByOne(chars ...byte) {
 func allOnce(chars ...byte) bool {
 	for _, c := range chars {
 		if occurences[c] != 1 {
+			occurences = make(map[byte]int, 0)
 			return false
 		}
 	}
