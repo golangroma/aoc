@@ -6,8 +6,6 @@ import (
 	"github.com/golangroma/aoc/utils"
 )
 
-var sample string = ``
-
 func TestPartOne(t *testing.T) {
 	tt := []struct {
 		name     string
@@ -15,9 +13,29 @@ func TestPartOne(t *testing.T) {
 		expected string
 	}{
 		{
-			name:     "example",
-			input:    sample,
-			expected: "not-yet-implemented",
+			name:     "example1",
+			input:    `mjqjpqmgbljsphdztnvjfqwrcgsmlb`,
+			expected: "7",
+		},
+		{
+			name:     "example2",
+			input:    `bvwbjplbgvbhsrlpgdmjqwftvncz`,
+			expected: "5",
+		},
+		{
+			name:     "example3",
+			input:    `nppdvjthqldpwncqszvftbrmjlhg`,
+			expected: "6",
+		},
+		{
+			name:     "example4",
+			input:    `nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg`,
+			expected: "10",
+		},
+		{
+			name:     "example5",
+			input:    `zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw`,
+			expected: "11",
 		},
 	}
 
@@ -38,9 +56,29 @@ func TestPartTwo(t *testing.T) {
 		expected string
 	}{
 		{
-			name:     "example",
-			input:    sample,
-			expected: "not-yet-implemented",
+			name:     "example1",
+			input:    `mjqjpqmgbljsphdztnvjfqwrcgsmlb`,
+			expected: "19",
+		},
+		{
+			name:     "example2",
+			input:    `bvwbjplbgvbhsrlpgdmjqwftvncz`,
+			expected: "23",
+		},
+		{
+			name:     "example3",
+			input:    `nppdvjthqldpwncqszvftbrmjlhg`,
+			expected: "23",
+		},
+		{
+			name:     "example4",
+			input:    `nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg`,
+			expected: "29",
+		},
+		{
+			name:     "example5",
+			input:    `zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw`,
+			expected: "26",
 		},
 	}
 
