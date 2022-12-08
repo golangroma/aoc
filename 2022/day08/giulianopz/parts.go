@@ -6,99 +6,86 @@ import (
 
 func PartOne(input []string) string {
 
-	var visible int
-
-	grid := make([][]int, len(input))
-	for i, line := range input {
-		grid[i] = make([]int, len(line))
-		for j, c := range line {
-			grid[i][j] = int(c - '0')
-		}
-	}
+	grid := makeGrid(input)
 
 	width := len(grid)
 	length := len(grid[0])
-	visible += ((width + length) * 2) - 4
+	visibleTrees := ((width + length) * 2) - 4
 
 	for row := 1; row < len(grid)-1; row++ {
 		for col := 1; col < len(grid[row])-1; col++ {
 
 			treeHeight := grid[row][col]
 
-			ok := true
+			visible := true
 			up := row
 			for up != 0 {
 				if treeHeight <= grid[up-1][col] {
-					ok = false
+					visible = false
 				}
 				up--
 			}
-			if ok {
-				visible++
+			if visible {
+				visibleTrees++
 				continue
 			}
 
-			ok = true
+			visible = true
 			down := row
 			for down != len(grid)-1 {
 				if treeHeight <= grid[down+1][col] {
-					ok = false
+					visible = false
 				}
 				down++
 			}
-			if ok {
-				visible++
+			if visible {
+				visibleTrees++
 				continue
 			}
 
-			ok = true
+			visible = true
 			left := col
 			for left != 0 {
 				if treeHeight <= grid[row][left-1] {
-					ok = false
+					visible = false
 				}
 				left--
 			}
-			if ok {
-				visible++
+			if visible {
+				visibleTrees++
 				continue
 			}
 
-			ok = true
+			visible = true
 			right := col
 			for right != len(grid[row])-1 {
 				if treeHeight <= grid[row][right+1] {
-					ok = false
+					visible = false
 				}
 				right++
 			}
-			if ok {
-				visible++
+			if visible {
+				visibleTrees++
 				continue
 			}
 		}
 	}
 
-	return fmt.Sprintf("%d", visible)
+	return fmt.Sprintf("%d", visibleTrees)
 }
 
 func PartTwo(input []string) string {
 
+	grid := makeGrid(input)
+
 	var maxScenicScore int
 
-	grid := make([][]int, len(input))
-	for i, line := range input {
-		grid[i] = make([]int, len(line))
-		for j, c := range line {
-			grid[i][j] = int(c - '0')
-		}
-	}
-
 	for row := 1; row < len(grid)-1; row++ {
+
 		for col := 1; col < len(grid[row])-1; col++ {
 
 			treeHeight := grid[row][col]
-			partial := make([]int, 0)
+			var scenicScore int
 
 			var trees int
 			up := row
@@ -109,10 +96,7 @@ func PartTwo(input []string) string {
 				}
 				up--
 			}
-			if trees != 0 {
-				partial = append(partial, trees)
-				trees = 0
-			}
+			trees, scenicScore = score(trees, scenicScore)
 
 			down := row
 			for down != len(grid)-1 {
@@ -122,10 +106,7 @@ func PartTwo(input []string) string {
 				}
 				down++
 			}
-			if trees != 0 {
-				partial = append(partial, trees)
-				trees = 0
-			}
+			trees, scenicScore = score(trees, scenicScore)
 
 			left := col
 			for left != 0 {
@@ -135,10 +116,7 @@ func PartTwo(input []string) string {
 				}
 				left--
 			}
-			if trees != 0 {
-				partial = append(partial, trees)
-				trees = 0
-			}
+			trees, scenicScore = score(trees, scenicScore)
 
 			right := col
 			for right != len(grid[row])-1 {
@@ -148,21 +126,33 @@ func PartTwo(input []string) string {
 				}
 				right++
 			}
-			if trees != 0 {
-				partial = append(partial, trees)
-				trees = 0
-			}
-
-			scenicScore := 1
-			for _, score := range partial {
-				scenicScore *= score
-			}
+			trees, scenicScore = score(trees, scenicScore)
 
 			if scenicScore > maxScenicScore {
 				maxScenicScore = scenicScore
 			}
 		}
 	}
-
 	return fmt.Sprintf("%d", maxScenicScore)
+}
+
+func makeGrid(input []string) [][]int {
+	grid := make([][]int, len(input))
+	for i, line := range input {
+		grid[i] = make([]int, len(line))
+		for j, c := range line {
+			grid[i][j] = int(c - '0')
+		}
+	}
+	return grid
+}
+
+func score(trees int, scenicScore int) (int, int) {
+	if trees != 0 {
+		if scenicScore == 0 {
+			scenicScore = 1
+		}
+		return 0, trees * scenicScore
+	}
+	return 0, scenicScore
 }
