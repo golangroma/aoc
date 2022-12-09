@@ -31,11 +31,28 @@ func (fs *fs) insert(d *dir) {
 		if current.name == d.name {
 			//TODO propagate size
 			current.size = d.size
+			updateSize(current)
 			current.children = d.children
 			return
 		}
 		stack = append(stack, current.children...)
 		stack = stack[1:]
+	}
+}
+
+func updateSize(d *dir) {
+	size := d.size
+	stack := make([]*dir, 0)
+	stack = append(stack, d.parent)
+	for len(stack) != 0 {
+		current := stack[0]
+		current.size += size
+		size = current.size
+
+		stack = stack[1:]
+		if current.parent != nil {
+			stack = append(stack, current.parent)
+		}
 	}
 }
 
