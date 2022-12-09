@@ -16,6 +16,17 @@ D 1
 L 5
 R 2`
 
+var sample2 string = `
+R 5
+U 8
+L 8
+D 3
+R 17
+D 10
+L 25
+U 20
+`
+
 func TestPartOne(t *testing.T) {
 	tt := []struct {
 		name     string
@@ -47,8 +58,8 @@ func TestPartTwo(t *testing.T) {
 	}{
 		{
 			name:     "example",
-			input:    sample,
-			expected: "not-yet-implemented",
+			input:    sample2,
+			expected: "36",
 		},
 	}
 
