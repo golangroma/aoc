@@ -143,18 +143,7 @@ func PartOne(input []string) string {
 
 func PartTwo(input []string) string {
 	visited := make(map[string]struct{})
-	knots := []Point{
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-		{0, 0},
-	}
+	knots := [10]Point{}
 	for _, command := range input {
 		comps := strings.Split(command, " ")
 		length, _ := strconv.Atoi(comps[1])
