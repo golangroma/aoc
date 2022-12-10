@@ -61,6 +61,8 @@ func PartOne(input []string) string {
 	dirRgx := regex(dirPattern)
 	fileRgx := regex(filePattern)
 
+	var root *dir
+
 	var lastDir *dir
 	for _, line := range input {
 
@@ -76,6 +78,9 @@ func PartOne(input []string) string {
 				if lastDir == nil {
 					lastDir = new(dir)
 					lastDir.name = dirName
+					if dirName == fsRootName {
+						root = lastDir
+					}
 				} else {
 					if dirName == previousDir {
 						lastDir = lastDir.parent
@@ -107,7 +112,23 @@ func PartOne(input []string) string {
 		}
 	}
 
-	return fmt.Sprintf("%d", 0)
+	var totSize int
+	stack := make([]*dir, 0)
+	stack = append(stack, root)
+	for len(stack) != 0 {
+
+		d := stack[0]
+		if d.size <= maxSize {
+			totSize += d.size
+		}
+		stack = stack[1:]
+
+		if len(d.children) != 0 {
+			stack = append(stack, d.children...)
+		}
+	}
+
+	return fmt.Sprintf("%d", totSize)
 }
 
 func PartTwo(input []string) string {
