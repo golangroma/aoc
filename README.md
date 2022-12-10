@@ -28,8 +28,8 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | User  | | Stars | Team  | Submitted Solutions  | 
 |---|-------|-------|-|-------|-------|--------------|
-| 1 | 229 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 8 |
-| 2 | 208 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 6 |
+| 1 | 241 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 8 |
+| 2 | 221 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 6 |
 | 3 | 167 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 3 |
 | 4 | 152 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟🌟🌟🌟🌟🌟➖🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 4 |
 | 5 | 152 | ![https://github.com/mbiagetti.png?size=60](https://github.com/mbiagetti.png?size=60) | [mbiagetti](https://github.com/mbiagetti) | 🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
@@ -47,8 +47,8 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
-| 1 | 952 | golangroma | 27 |
-| 2 | 208 | golangnapoli | 6 |
+| 1 | 964 | golangroma | 27 |
+| 2 | 221 | golangnapoli | 6 |
 | 3 | 53 | golangtorino | 3 |
 | 4 | 0 | golangmilano | 0 |
 
