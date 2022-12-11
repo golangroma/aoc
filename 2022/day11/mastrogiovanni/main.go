@@ -2,45 +2,7 @@ package main
 
 import "fmt"
 
-// var (
-// 	_m0 = &Monkey{
-// 		worry_levels:    []int{79, 98},
-// 		operation:       func(old int) int { return old * 19 },
-// 		divisor:         23,
-// 		monkey_if_true:  2,
-// 		monkey_if_false: 3,
-// 	}
-
-// 	_m1 = &Monkey{
-// 		worry_levels:    []int{54, 65, 75, 74},
-// 		operation:       func(old int) int { return old + 6 },
-// 		divisor:         19,
-// 		monkey_if_true:  2,
-// 		monkey_if_false: 0,
-// 	}
-
-// 	_m2 = &Monkey{
-// 		worry_levels:    []int{79, 60, 97},
-// 		operation:       func(old int) int { return old * old },
-// 		divisor:         13,
-// 		monkey_if_true:  1,
-// 		monkey_if_false: 3,
-// 	}
-
-// 	_m3 = &Monkey{
-// 		worry_levels:    []int{74},
-// 		operation:       func(old int) int { return old + 3 },
-// 		divisor:         17,
-// 		monkey_if_true:  0,
-// 		monkey_if_false: 1,
-// 	}
-
-// 	monkeysTest = []*Monkey{_m0, _m1, _m2, _m3}
-// )
-
-func main() {
-	// input := utils.ReadFile("input.txt")
-
+func parse() []*Monkey {
 	m0 := &Monkey{
 		worry_levels:    []int{73, 77},
 		operation:       func(old int) int { return old * 5 },
@@ -105,8 +67,13 @@ func main() {
 		monkey_if_false: 2,
 	}
 
-	monkeys := []*Monkey{m0, m1, m2, m3, m4, m5, m6, m7}
+	return []*Monkey{m0, m1, m2, m3, m4, m5, m6, m7}
+}
 
+func main() {
+	monkeys := parse()
 	fmt.Printf("Part 1: %v\n", PartOne(monkeys))
-	fmt.Printf("Part 2: %v\n", PartTwo(monkeys))
+
+	monkeys = parse()
+	fmt.Printf("Part 1: %v\n", PartTwo(monkeys))
 }

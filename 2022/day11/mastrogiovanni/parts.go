@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func PartOne(monkeys []*Monkey) string {
 	for i := 0; i < 20; i++ {
