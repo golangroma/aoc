@@ -38,6 +38,40 @@ var (
 	}
 
 	monkeys = []*Monkey{m0, m1, m2, m3}
+
+	m01 = &Monkey{
+		worry_levels:    []int{79, 98},
+		operation:       func(old int) int { return old * 19 },
+		divisor:         23,
+		monkey_if_true:  2,
+		monkey_if_false: 3,
+	}
+
+	m11 = &Monkey{
+		worry_levels:    []int{54, 65, 75, 74},
+		operation:       func(old int) int { return old + 6 },
+		divisor:         19,
+		monkey_if_true:  2,
+		monkey_if_false: 0,
+	}
+
+	m21 = &Monkey{
+		worry_levels:    []int{79, 60, 97},
+		operation:       func(old int) int { return old * old },
+		divisor:         13,
+		monkey_if_true:  1,
+		monkey_if_false: 3,
+	}
+
+	m31 = &Monkey{
+		worry_levels:    []int{74},
+		operation:       func(old int) int { return old + 3 },
+		divisor:         17,
+		monkey_if_true:  0,
+		monkey_if_false: 1,
+	}
+
+	monkeys2 = []*Monkey{m01, m11, m21, m31}
 )
 
 func TestPartOne(t *testing.T) {
@@ -70,7 +104,7 @@ func TestPartTwo(t *testing.T) {
 	}{
 		{
 			name:     "example",
-			input:    monkeys,
+			input:    monkeys2,
 			expected: "2713310158",
 		},
 	}
