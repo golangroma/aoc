@@ -23,11 +23,11 @@ func TestPartOne(t *testing.T) {
 		input    string
 		expected string
 	}{
-		{
-			name:     "example",
-			input:    sample,
-			expected: "CMZ",
-		},
+		// {
+		// 	name:     "example",
+		// 	input:    sample,
+		// 	expected: "CMZ",
+		// },
 	}
 
 	for _, tc := range tt {
@@ -46,11 +46,11 @@ func TestPartTwo(t *testing.T) {
 		input    string
 		expected string
 	}{
-		{
-			name:     "example",
-			input:    sample,
-			expected: "MCD",
-		},
+		// {
+		// 	name:     "example",
+		// 	input:    sample,
+		// 	expected: "MCD",
+		// },
 	}
 
 	for _, tc := range tt {
