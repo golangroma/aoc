@@ -25,12 +25,6 @@ func min(left, right int) int {
 	return right
 }
 
-type Items []any
-
-func (a Items) Len() int           { return len(a) }
-func (a Items) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-func (a Items) Less(i, j int) bool { return compare(a[i], a[j]) < 0 }
-
 func compare(left any, right any) int {
 	lInt, lList, lIsInt := typeOf(left)
 	rInt, rList, rIsInt := typeOf(right)
