@@ -7,12 +7,6 @@ import (
 	"strconv"
 )
 
-type List struct {
-	Left  *Node
-	Right *Node
-	Index int
-}
-
 type Node struct {
 	Value  *int
 	Nodes  *[]Node
@@ -150,30 +144,22 @@ func ParseInput(in string, i int, parent *Node) *Node {
 
 func PartOne(input []string) string {
 	var result int
-	var lists []List
 
 	idx := 1
 
 	for i := 0; i < len(input); i += 3 {
-		list := List{}
-		list.Left = &Node{}
-		list.Right = &Node{}
+		left := &Node{}
+		right := &Node{}
 
-		_ = ParseInput(input[i], 1, list.Left)
-		_ = ParseInput(input[i+1], 1, list.Right)
-		list.Index = idx
+		_ = ParseInput(input[i], 1, left)
+		_ = ParseInput(input[i+1], 1, right)
 
-		lists = append(lists, list)
+		res, _ := Compare(left, right)
+		if res {
+			result += idx
+		}
 
 		idx++
-	}
-
-	for i := 0; i < len(lists); i++ {
-		fmt.Printf("idx %d\n", lists[i].Index)
-		res, _ := Compare(lists[i].Left, lists[i].Right)
-		if res {
-			result += lists[i].Index
-		}
 	}
 
 	return strconv.Itoa(result)
