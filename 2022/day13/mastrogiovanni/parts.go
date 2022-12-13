@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func PartOne(inputs []string) string {
@@ -10,14 +11,7 @@ func PartOne(inputs []string) string {
 	for i := 0; i < len(inputs); i += 3 {
 		left := inputs[i]
 		right := inputs[i+1]
-		fmt.Println(left)
-		fmt.Println(right)
-		fmt.Printf("\n\n%s\n%s\n", left, right)
-		// res := Compare1(left, right)
-		// res := Compare2(left, right)
-		res := Compare3(left, right)
-		fmt.Printf("%+v\n\n", res)
-		if res {
+		if res := Compare3(left, right); res {
 			tot += index
 		}
 		index++
@@ -25,6 +19,23 @@ func PartOne(inputs []string) string {
 	return fmt.Sprintf("%d", tot)
 }
 
-func PartTwo(input []string) string {
-	return ""
+func PartTwo(inputs []string) string {
+	list := make(Items, 0)
+	for i := 0; i < len(inputs); i += 3 {
+		left := parse(inputs[i])
+		right := parse(inputs[i+1])
+		list = append(list, left, right)
+	}
+	list = append(list, parse("[[2]]"), parse("[[6]]"))
+	sort.Sort(list)
+	tot := 1
+	for i := 0; i < len(list); i++ {
+		if fmt.Sprintf("%+v", list[i]) == "[[2]]" {
+			tot *= (i + 1)
+		}
+		if fmt.Sprintf("%+v", list[i]) == "[[6]]" {
+			tot *= (i + 1)
+		}
+	}
+	return fmt.Sprintf("%d", tot)
 }
