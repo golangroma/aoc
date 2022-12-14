@@ -19,7 +19,7 @@ type P struct {
 }
 
 func (p P) Same(p2 P) bool {
-	return p.X == p2.X && p.Y == p2.Y
+	return p == p2
 }
 
 func (p P) String() string {
