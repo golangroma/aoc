@@ -64,7 +64,7 @@ func TestPartTwo(t *testing.T) {
 		{
 			name:     "example",
 			input:    sample,
-			expected: "94853",
+			expected: "24933642",
 		},
 	}
 
