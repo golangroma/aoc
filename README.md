@@ -29,7 +29,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | Score | User  | | Stars | Team  | Submitted Solutions  | 
 |---|-------|-------|-|-------|-------|--------------|
 | 1 | 382 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖ | golangroma | 14 |
-| 2 | 342 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 6 |
+| 2 | 354 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 6 |
 | 3 | 287 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖ | golangroma | 14 |
 | 4 | 231 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐🌟➖🌟➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 9 |
 | 5 | 231 |  | T Rex | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖ |  | 0 |
@@ -48,7 +48,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
 | 1 | 1399 | golangroma | 55 |
-| 2 | 342 | golangnapoli | 6 |
+| 2 | 354 | golangnapoli | 6 |
 | 3 | 57 | golangtorino | 3 |
 | 4 | 0 | golangmilano | 0 |
 
