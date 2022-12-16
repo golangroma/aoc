@@ -28,11 +28,11 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | User  | | Stars | Team  | Submitted Solutions  | 
 |---|-------|-------|-|-------|-------|--------------|
-| 1 | 382 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖ | golangroma | 14 |
+| 1 | 395 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖ | golangroma | 14 |
 | 2 | 354 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 6 |
 | 3 | 298 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖ | golangroma | 15 |
-| 4 | 231 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐🌟➖🌟➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 9 |
-| 5 | 231 |  | T Rex | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖ |  | 0 |
+| 4 | 251 |  | T Rex | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖ |  | 0 |
+| 5 | 231 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐🌟➖🌟➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 9 |
 | 6 | 171 | ![https://github.com/alessio-perugini.png?size=60](https://github.com/alessio-perugini.png?size=60) | [alessio-perugini](https://github.com/alessio-perugini) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖🌟➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 7 |
 | 7 | 152 | ![https://github.com/mbiagetti.png?size=60](https://github.com/mbiagetti.png?size=60) | [mbiagetti](https://github.com/mbiagetti) | 🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 8 | 101 | ![https://github.com/misterdelle.png?size=60](https://github.com/misterdelle.png?size=60) | [misterdelle](https://github.com/misterdelle) | 🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 8 |
@@ -47,7 +47,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
-| 1 | 1410 | golangroma | 57 |
+| 1 | 1423 | golangroma | 57 |
 | 2 | 354 | golangnapoli | 6 |
 | 3 | 57 | golangtorino | 3 |
 | 4 | 0 | golangmilano | 0 |
