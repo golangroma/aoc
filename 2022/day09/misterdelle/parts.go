@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-
-	"golang.org/x/exp/constraints"
 )
 
 type Set[T comparable] map[T]bool
@@ -101,7 +99,7 @@ func (s *State) MoveTail() {
 	s.path.Add(s.rope[s.n-1])
 }
 
-func Abs[T constraints.Integer | constraints.Float](x T) T {
+func Abs(x int) int {
 	if x < 0 {
 		return -x
 	}
