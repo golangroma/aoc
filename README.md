@@ -29,7 +29,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | Score | User  | | Stars | Team  | Submitted Solutions  | 
 |---|-------|-------|-|-------|-------|--------------|
 | 1 | 536 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖ | golangroma | 21 |
-| 2 | 452 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖ | golangnapoli | 17 |
+| 2 | 464 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖ | golangnapoli | 17 |
 | 3 | 309 | ![https://github.com/mastrogiovanni.png?size=60](https://github.com/mastrogiovanni.png?size=60) | [mastrogiovanni](https://github.com/mastrogiovanni) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟➖⭐➖➖➖➖➖➖➖➖ | golangroma | 15 |
 | 4 | 262 |  | T Rex | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖ |  | 0 |
 | 5 | 231 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟⭐🌟➖🌟➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 9 |
@@ -48,7 +48,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
 | 1 | 1598 | golangroma | 66 |
-| 2 | 452 | golangnapoli | 17 |
+| 2 | 464 | golangnapoli | 17 |
 | 3 | 57 | golangtorino | 3 |
 | 4 | 0 | golangmilano | 0 |
 
