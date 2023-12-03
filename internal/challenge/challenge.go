@@ -10,7 +10,7 @@ import (
 	"github.com/golangroma/aoc/pkg/aoc"
 )
 
-var years = []string{"2022", "2021", "2020"}
+var years = []string{"2023", "2022", "2021", "2020"}
 
 func Execute(session string) error {
 	// load the teams.yaml file
