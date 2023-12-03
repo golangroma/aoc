@@ -24,6 +24,8 @@ participants:
   name: 8lall0
 - aoc_id: 2527273
   name: misterdelle
+- aoc_id: 3525219
+  name: saiello  
 
 #
 # Join a team by adding your name to it!
@@ -39,6 +41,7 @@ team:
   - alessio-perugini
   - mbiagetti
   - misterdelle
+  - saiello
 
 - id: golangnapoli
   link: https://golangnapoli.it
