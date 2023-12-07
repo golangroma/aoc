@@ -32,7 +32,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 | 2 | 163 | ![https://github.com/saiello.png?size=60](https://github.com/saiello.png?size=60) | [saiello](https://github.com/saiello) | 🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 3 | 91 | ![https://github.com/8lall0.png?size=60](https://github.com/8lall0.png?size=60) | [8lall0](https://github.com/8lall0) | 🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 0 |
 | 4 | 90 | ![https://github.com/enrichman.png?size=60](https://github.com/enrichman.png?size=60) | [enrichman](https://github.com/enrichman) | 🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 1 |
-| 5 | 32 | ![https://github.com/alessio-perugini.png?size=60](https://github.com/alessio-perugini.png?size=60) | [alessio-perugini](https://github.com/alessio-perugini) | 🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
+| 5 | 41 | ![https://github.com/alessio-perugini.png?size=60](https://github.com/alessio-perugini.png?size=60) | [alessio-perugini](https://github.com/alessio-perugini) | 🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 6 | 20 | ![https://github.com/Al-Pragliola.png?size=60](https://github.com/Al-Pragliola.png?size=60) | [Al-Pragliola](https://github.com/Al-Pragliola) | 🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangnapoli | 0 |
 | 7 | 12 | ![https://github.com/giulianopz.png?size=60](https://github.com/giulianopz.png?size=60) | [giulianopz](https://github.com/giulianopz) | ⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 8 | 7 | ![https://github.com/misterdelle.png?size=60](https://github.com/misterdelle.png?size=60) | [misterdelle](https://github.com/misterdelle) | ⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
@@ -47,7 +47,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
-| 1 | 483 | golangroma | 8 |
+| 1 | 492 | golangroma | 8 |
 | 2 | 20 | golangnapoli | 0 |
 | 3 | 91 | golangtorino | 0 |
 | 4 | 0 | golangmilano | 0 |
