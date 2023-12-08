@@ -28,7 +28,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | User  | | Stars | Team  | Submitted Solutions  | 
 |---|-------|-------|-|-------|-------|--------------|
-| 1 | 205 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 7 |
+| 1 | 205 | ![https://github.com/lucianoq.png?size=60](https://github.com/lucianoq.png?size=60) | [lucianoq](https://github.com/lucianoq) | 🌟🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 8 |
 | 2 | 163 | ![https://github.com/saiello.png?size=60](https://github.com/saiello.png?size=60) | [saiello](https://github.com/saiello) | 🌟🌟🌟🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 0 |
 | 3 | 91 | ![https://github.com/8lall0.png?size=60](https://github.com/8lall0.png?size=60) | [8lall0](https://github.com/8lall0) | 🌟🌟🌟🌟➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangtorino | 0 |
 | 4 | 90 | ![https://github.com/enrichman.png?size=60](https://github.com/enrichman.png?size=60) | [enrichman](https://github.com/enrichman) | 🌟🌟🌟🌟⭐➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ | golangroma | 1 |
@@ -47,7 +47,7 @@ La gloria eterna! E forse anche un piccolo premio, vedremo! :D
 
 | # | Score | Team  | Submitted Solutions  | 
 |---|-------|-------|--------------|
-| 1 | 536 | golangroma | 8 |
+| 1 | 536 | golangroma | 9 |
 | 2 | 20 | golangnapoli | 0 |
 | 3 | 91 | golangtorino | 0 |
 | 4 | 0 | golangmilano | 0 |
