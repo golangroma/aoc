@@ -33,56 +33,60 @@ func PartOne(input []string) string {
 
 type Card struct {
 	id             int
-	winningNumbers []int
+	boardNumbers   []int
 	guessedNumbers []int
+	latestID       int
 }
 
-func (c Card) Play() int {
+func (c Card) Play() []int {
+	result := []int{}
 	sum := 0
-	for _, n := range c.winningNumbers {
-		if slices.Contains(c.winningNumbers, n) {
+	for _, n := range c.guessedNumbers {
+		if slices.Contains(c.boardNumbers, n) {
 			sum++
+			result = append(result, c.id+sum)
 		}
 	}
-	return sum
+	return result
 }
 
 func PartTwo(input []string) string {
 	var sum int
-	cardCopies := map[int]int{}
 	parsedCards := map[int]Card{}
-	latestCardID := 0
+	cardSeen := map[int]int{}
+	//latestCardID := len(input)
 
+	queue := []int{}
 	for _, v := range input {
 		var gameID int
 		game, nextToken, _ := strings.Cut(v, ": ")
 		_, _ = fmt.Sscanf(game, "Card %d", &gameID)
-		latestCardID = gameID
 		winningBoard, myNumbers, _ := strings.Cut(nextToken, " | ")
 		wBoard, gNumbers := parseBoard(winningBoard), parseBoard(myNumbers)
-		parsedCards[gameID] = Card{
-			id:             latestCardID,
-			winningNumbers: wBoard,
+		c := Card{
+			id:             gameID,
+			boardNumbers:   wBoard,
 			guessedNumbers: gNumbers,
 		}
-	}
-
-	for _, v := range parsedCards {
-		n := v.Play()
-		for i := 0; i <= n; i++ {
-			if v.id+i > latestCardID {
-				break
-			}
-			cardCopies[v.id+i] = cardCopies[v.id+i] + 1
+		parsedCards[gameID] = c
+		copies := c.Play()
+		if len(copies) > 0 {
+			queue = append(queue, c.Play()...)
+			sum++
+			cardSeen[gameID]++
 		}
 	}
 
-	for k, v := range cardCopies {
-		if k > latestCardID {
-			continue
-		}
-		sum += v + 1
+	for len(queue) > 0 {
+		var id int
+		id, queue = queue[0], queue[1:]
+		copies := parsedCards[id].Play()
+		cardSeen[id]++
+		sum++
+		fmt.Println(id, copies)
+		queue = append(queue, copies...)
 	}
+	fmt.Println(cardSeen)
 
 	return fmt.Sprintf("%v", sum)
 }
